@@ -1,0 +1,41 @@
+﻿#include <iostream>
+//1
+int main() {
+    int A[11];
+    for(int i=1; i<=10; i++) {
+        A[i-1] = i;
+    }
+    std::cout << A[4];
+    return 0;   
+}
+//2
+int main() {
+    char str[10] = {'H','I','E','A','Z','L','T','L','U','O'};
+    std::cout << str[0] << str[2] << str[5] << str[7] << str[9] << '\n';
+    return 0;
+}
+//3
+int main() {
+    char str[6] = "Hello";
+    char *pstr[6];
+    
+    for (int i=0; i<6; i++) {
+        pstr[i] = &(str[i]);
+    }
+    std::cout << *pstr;
+    return 0;
+}
+//4
+void swap(int *x, int *y) {
+    int tmp = *x;
+    *x = *y;
+    *y = tmp;
+}
+
+int main() {
+    int a=10, b=20;
+    std::cout << a << ", " << b << std::endl;
+    swap(&a, &b);
+    std::cout << a << ", " << b << std::endl;
+    return 0;
+}
